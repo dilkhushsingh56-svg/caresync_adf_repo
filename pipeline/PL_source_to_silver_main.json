@@ -18,7 +18,7 @@
 					"source": {
 						"type": "AzureSqlSource",
 						"sqlReaderQuery": {
-							"value": "SELECT table_id from ctrl.table_config where is_Active=1 and source_system='@{pipeline().parameters.source_system}'",
+							"value": "SELECT table_id from ctrl.table_config where is_Active=1 and source_system='neon_postgres'",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -187,6 +187,10 @@
 			"source_system": {
 				"type": "string",
 				"defaultValue": "neon_postgres"
+			},
+			"adf_run_id": {
+				"type": "string",
+				"defaultValue": "a4"
 			}
 		},
 		"variables": {
