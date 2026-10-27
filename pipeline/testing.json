@@ -41,6 +41,11 @@
 				"defaultValue": "a4"
 			}
 		},
+		"variables": {
+			"test": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
