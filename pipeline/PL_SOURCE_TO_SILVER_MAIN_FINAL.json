@@ -34,14 +34,7 @@
 			{
 				"name": "Ingest All tables",
 				"type": "ForEach",
-				"dependsOn": [
-					{
-						"activity": "Read Source Tables List",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
