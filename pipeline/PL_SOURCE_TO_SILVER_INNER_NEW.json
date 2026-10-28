@@ -141,7 +141,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/dilkhushsingh56@gmail.com/caresync-abd-repo/landing_to_bronze",
+					"notebookPath": "/Users/dilkhushsingh56@gmail.com/caresync-abd-repo/landing_to_Bronze",
 					"baseParameters": {
 						"source_system": {
 							"value": "@activity('Read Table Details').output.firstRow.source_system",
@@ -182,7 +182,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"notebookPath": "/Users/dilkhushsingh56@gmail.com/caresync-abd-repo/Bronze-to-Silver",
+					"notebookPath": "/Users/dilkhushsingh56@gmail.com/caresync-abd-repo/Bronze_to_Silver",
 					"baseParameters": {
 						"table_name": {
 							"value": "@activity('Read Table Details').output.firstRow.silver_table_name",
@@ -227,7 +227,7 @@
 						{
 							"type": "Query",
 							"text": {
-								"value": "update ctrl.audit_log\nSET STATUS='FAILED', end_time=SYSUTCDATETIME()\nWHERE adf_run_id='@{pipeline().parameters.adf_run_id}' and table_id=@{item().table_id};",
+								"value": "update ctrl.audit_log\nSET STATUS='SUCCESS', end_time=SYSUTCDATETIME(),records_written=@{activity('Bronze to Silver').output.runOutput}\nWHERE adf_run_id='@{pipeline().parameters.adf_run_id}' and table_id=@{pipeline().parameters.table_id}",
 								"type": "Expression"
 							}
 						}
