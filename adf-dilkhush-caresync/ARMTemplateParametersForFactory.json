@@ -5,7 +5,13 @@
 		"factoryName": {
 			"value": "adf-dilkhush-caresync"
 		},
+		"AzureDatabricks2_accessToken": {
+			"value": ""
+		},
 		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "1026-124423-nr8xfzx7"
+		},
+		"AzureDatabricks2_properties_typeProperties_existingClusterId": {
 			"value": "1026-124423-nr8xfzx7"
 		},
 		"LS_ADLS_properties_typeProperties_url": {
